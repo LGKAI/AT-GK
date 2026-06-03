@@ -1,3 +1,3 @@
-# AT-GK - Tình yêu socola kẹo mút
+# AT & GK - Tình yêu socola kẹo mút
 
-Link: https://lgkai.github.io/project1_at-gk/
+Link: https://lgkai.github.io/AT-GK/
