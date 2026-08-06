@@ -10,7 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
@@ -105,10 +105,10 @@ nav a:hover { color: #ffe4e1; text-decoration: underline; }
 
 .card {
     background: white;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 30px;
     margin-bottom: 40px;
-    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.6);
     border: 2px solid var(--pink-main);
 }
 
@@ -161,6 +161,8 @@ nav a:hover { color: #ffe4e1; text-decoration: underline; }
     border: 3px solid white; /* Viền trắng xung quanh ảnh */
 }
 
+
+
 /* Bài Quiz */
 .question { margin-bottom: 15px; font-size: 1.1em; }
 .question p { font-weight: bold; margin-bottom: 5px; color: var(--pink-dark); }
@@ -169,19 +171,19 @@ nav a:hover { color: #ffe4e1; text-decoration: underline; }
 .btn {
     display: block;
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background-color: var(--pink-dark);
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
+    border-radius: 30px;
+    font-size: 1.3em;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
+    margin-top: 25px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.btn:hover { background-color: #ff1493; }
+.btn:hover { background-color: #ff1493; transform: scale(1.03); }
 
 .result-box {
     margin-top: 20px;
@@ -206,4 +208,128 @@ nav a:hover { color: #ffe4e1; text-decoration: underline; }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Khu vực Video */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.video-item {
+    background: var(--pink-light);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--pink-main);
+    text-align: center;
+}
+
+.video-item h3 {
+    color: var(--pink-dark);
+    margin-bottom: 15px;
+}
+
+.video-item video, .video-item iframe {
+    width: 100%;
+    max-width: 320px; /* Thu nhỏ tối đa để vừa vặn, đặc biệt là video dọc */
+    aspect-ratio: 9 / 16; /* Chuẩn tỷ lệ video dọc */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: black;
+}
+
+.video-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* =========================================================================
+   RESPONSIVE CHO ĐIỆN THOẠI (Max width 768px)
+   ========================================================================= */
+@media (max-width: 768px) {
+    /* Header và Thanh menu */
+    header {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 1.4em;
+    }
+    header h2 {
+        font-size: 1em;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    nav a {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    /* Vùng chứa nội dung */
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    .card {
+        padding: 20px 15px;
+    }
+    .card h2 {
+        font-size: 1.3em;
+    }
+
+    /* Phần Lịch sử */
+    .content-row {
+        flex-direction: column;
+    }
+    .content-row img, 
+    .content-row .text {
+        width: 100%;
+    }
+
+    /* Phần Địa điểm & Món ăn (Hiển thị 1 cột) */
+    .gallery-item {
+        width: 100%;
+    }
+    
+    /* Vùng Video */
+    .video-item {
+        padding: 15px;
+    }
+    .video-item p {
+        font-size: 1em;
+    }
+
+    /* Bài Test */
+    .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--pink-dark);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+    .question {
+        font-size: 1em;
+    }
+}
+/* Kết quả trắc nghiệm */
+.correct-text {
+    color: #ff69b4;
+    font-weight: bold;
+}
+.wrong-text {
+    color: #dc3545;
 }

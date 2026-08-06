@@ -8,6 +8,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
     
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="hearts-container"></div>
@@ -19,6 +20,7 @@
             <a href="#history">Lịch Sử Chuyện Tình</a>
             <a href="#places">Nơi Ghi Dấu Kỉ Niệm</a>
             <a href="#foods">Món Ngon Hai Đứa</a>
+            <a href="#music">Nhạc Rap Cho Em</a>
             <a href="#quiz">Bài Test Fan Cứng</a>
         </nav>
     </header>
@@ -148,33 +150,76 @@
             </div>
         </section>
 
+        <section id="music" class="card hidden-section">
+            <h2>🎤 Nhạc Rap Khánh viết tặng Thư</h2>
+            <div class="video-container">
+                <div class="video-item">
+                    <h3>Bản tình ca không hoàn thiện</h3>
+                    <iframe src="https://drive.google.com/file/d/1HqwOnH1b9PJGPe4grrTEU8hxz3hLVCnl/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <p><strong>Gia Khánh viết vào tháng 3/2026:</strong> Ghi lại những kỉ niệm khó phai, những điều tốt đẹp mà Anh Thư mang lại cho cuộc sống của Gia Khánh. Từng câu chữ đều là sự chân thành và tình cảm nồng nhiệt nhất của một chàng trai đang chìm đắm trong tình yêu, muốn lưu giữ lại khoảnh khắc đẹp đẽ nhất của hai đứa.</p>
+                </div>
+                
+                <div class="video-item">
+                    <h3>Ngày rời chuyến bay</h3>
+                    <iframe src="https://drive.google.com/file/d/19ZEv_H4XH_CkpAKaUtjR1huuAT53qK_R/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <p><strong>Gia Khánh viết vào tháng 7/2026:</strong> Đó là lúc Gia Khánh sắp tạm biệt Anh Thư để về quê. Vì sắp phải xa nhau nên Gia Khánh đã bày tỏ nỗi nhớ Anh Thư qua từng câu rap. Cảm giác bịn rịn, chẳng nỡ rời xa được gói gọn trong giai điệu đầy cảm xúc, như một lời hứa sẽ sớm gặp lại nhau.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="quiz" class="card hidden-section">
             <h2>🎯 Bài Test: Bạn có phải là Fan cứng của Thư và Khánh?</h2>
             <form id="loveQuiz">
+
                 <div class="question">
-                    <p>1. Biệt danh mà Gia Khánh đặt cho Anh Thư là gì?</p>
-                    <label><input type="radio" name="q1" value="true"> Em Bé</label>
-                    <label><input type="radio" name="q1" value="false"> Con Heo</label>
+                    <p>1. Anh Thư và Gia Khánh chính thức bắt đầu câu chuyện tình yêu vào ngày nào?</p>
+                    <label><input type="radio" name="q1" value="true"> 30/10/2025</label>
+                    <label><input type="radio" name="q1" value="false"> 30/09/2025</label>
                 </div>
                 <div class="question">
-                    <p>2. Biệt danh mà Anh Thư đặt cho Gia Khánh là gì?</p>
-                    <label><input type="radio" name="q2" value="true"> Cục Cưng</label>
-                    <label><input type="radio" name="q2" value="false"> Cục Dàng</label>
+                    <p>2. Trong đợt học quân sự, Anh Thư giữ chức vụ gì?</p>
+                    <label><input type="radio" name="q2" value="true"> Đại đội phó hậu cần</label>
+                    <label><input type="radio" name="q2" value="false"> Đại đội trưởng</label>
                 </div>
                 <div class="question">
-                    <p>3. Từ signature của Anh Thư và Gia Khánh dùng để chọc nhau?</p>
-                    <label><input type="radio" name="q3" value="true"> Bối rối</label>
-                    <label><input type="radio" name="q3" value="false"> Mập địt</label>
+                    <p>3. Món ăn nào do chính tay Anh Thư làm khiến Gia Khánh thích nhất?</p>
+                    <label><input type="radio" name="q3" value="false"> Cơm thịt heo luộc</label>
+                    <label><input type="radio" name="q3" value="true"> Cơm lạp xưởng</label>
                 </div>
                 <div class="question">
-                    <p>4. Những lúc nũng nịu và nghịch Gia Khánh, Anh Thư hay làm gì nhất?</p>
-                    <label><input type="radio" name="q4" value="true"> Vuốt ve và hun Gia Khánh</label>
-                    <label><input type="radio" name="q4" value="false"> Cắn và tát Gia Khánh</label>
+                    <p>4. Món "Ốc móng tay sốt me" mà Thư ghiền tới mức chấm cạn nước sốt được ăn ở đâu?</p>
+                    <label><input type="radio" name="q4" value="true"> Vũng Tàu</label>
+                    <label><input type="radio" name="q4" value="false"> Làng đại học</label>
                 </div>
                 <div class="question">
-                    <p>5. Anh Thư hay dùng câu nào để "chê" Gia Khánh?</p>
-                    <label><input type="radio" name="q5" value="true"> Anh chạ tinh tế gì cạ!</label>
-                    <label><input type="radio" name="q5" value="false"> Anh quá tệ!</label>
+                    <p>5. Bài hát "Ngày rời chuyến bay" được Gia Khánh sáng tác vào thời điểm nào?</p>
+                    <label><input type="radio" name="q5" value="false"> Tháng 3/2026</label>
+                    <label><input type="radio" name="q5" value="true"> Tháng 7/2026</label>
+                </div>
+                <div class="question">
+                    <p>6. Biệt danh mà Gia Khánh đặt cho Anh Thư là gì?</p>
+                    <label><input type="radio" name="q6" value="true"> Em Bé</label>
+                    <label><input type="radio" name="q6" value="false"> Con Heo</label>
+                </div>
+                <div class="question">
+                    <p>7. Biệt danh mà Anh Thư đặt cho Gia Khánh là gì?</p>
+                    <label><input type="radio" name="q7" value="true"> Cục Cưng</label>
+                    <label><input type="radio" name="q7" value="false"> Cục Dàng</label>
+                </div>
+                <div class="question">
+                    <p>8. Từ signature của Anh Thư và Gia Khánh dùng để chọc nhau?</p>
+                    <label><input type="radio" name="q8" value="true"> Bối rối</label>
+                    <label><input type="radio" name="q8" value="false"> Mập địt</label>
+                </div>
+                <div class="question">
+                    <p>9. Những lúc nũng nịu và nghịch Gia Khánh, Anh Thư hay làm gì nhất?</p>
+                    <label><input type="radio" name="q9" value="true"> Vuốt ve và hun Gia Khánh</label>
+                    <label><input type="radio" name="q9" value="false"> Cắn và tát Gia Khánh</label>
+                </div>
+                <div class="question">
+                    <p>10. Anh Thư hay dùng câu nào để "chê" Gia Khánh?</p>
+                    <label><input type="radio" name="q10" value="true"> Anh chạ tinh tế gì cạ!</label>
+                    <label><input type="radio" name="q10" value="false"> Anh quá tệ!</label>
                 </div>
                 <button type="submit" class="btn">Nộp Bài Test</button>
             </form>
