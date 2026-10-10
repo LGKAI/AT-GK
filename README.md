@@ -6,18 +6,28 @@ Website kỉ niệm tình yêu của **Anh Thư** và **Gia Khánh**
 
 ---
 
-## 📁 Cấu Trúc & Chức Năng File/Folder
+## 📁 Cấu Trúc Thư Mục & Chức Năng
 
-- **`index.html`**: Cấu trúc nội dung toàn bộ website (Header mobile, Sidebar menu, Top-bar cố định, các section nội dung và Form trắc nghiệm).
-- **`style.css`**: Toàn bộ giao diện màu hồng pastel, hiệu ứng kính mờ (glassmorphism), hoạt ảnh (animation) và chuẩn hoá responsive trên điện thoại/tablet.
-- **`script.js`**: Logic tương tác gồm:
-  - Tự động tính số ngày yêu từ mốc **30/10/2025**.
-  - Hiệu ứng bong bóng trái tim/kẹo ngọt bay ngẫu nhiên.
-  - Điều hướng chuyển trang mượt mà (không bị cuộn giật).
-  - Đóng/mở menu ngăn kéo trên di động.
-  - Tự động chấm điểm bài test fan cứng 10 câu.
-- **`img/`**: Thư mục lưu trữ hình ảnh (avatar vuông `favicon.jpg`, ảnh bìa, các sự kiện, 10 địa điểm và 12 món ăn kỉ niệm).
-- **`README.md`**: Hướng dẫn thông tin dự án và cách triển khai.
+```text
+bai39_project4_at-gk/
+├── img/                   # Chứa hình ảnh (avatar, kỉ niệm, 10 địa điểm, 12 món ăn)
+│   ├── favicon.jpg        # Avatar đại diện & Icon trang web
+│   ├── start.jpg          # Ảnh trang chủ chào mừng
+│   ├── story.jpg          # Ảnh phần lịch sử chuyện tình
+│   ├── kiniem*.jpg        # Ảnh các sự kiện kỉ niệm đặc biệt
+│   ├── sinhnhat*.jpg      # Ảnh sinh nhật Anh Thư & Gia Khánh
+│   └── ...                # Ảnh các địa điểm và món ăn kỉ niệm
+├── index.html             # Cấu trúc HTML chính (Header, Sidebar, Top-bar, 6 Section, Quiz)
+├── style.css              # Toàn bộ CSS (Tone hồng pastel, Glassmorphism, Responsive)
+├── script.js              # Logic JavaScript (Đếm ngày yêu, trái tim bay, chuyển tab, Quiz)
+└── README.md              # Tài liệu hướng dẫn sử dụng & triển khai
+```
+
+- **`index.html`**: Khung sườn giao diện gồm Sidebar bên trái, Top-Bar cố định trên cùng, các mục nội dung và bài test trắc nghiệm.
+- **`style.css`**: Giao diện màu hồng pastel, hiệu ứng chuyển động, thiết kế lưới ảnh 1:1 và chuẩn hoá responsive trên điện thoại.
+- **`script.js`**: Tính ngày yêu từ 30/10/2025, tạo trái tim bay, đổi tab tức thì (không cuộn giật) và chấm điểm tự động.
+- **`img/`**: Thư mục lưu trữ 29 hình ảnh kỉ niệm chất lượng cao.
+- **`README.md`**: Thông tin tổng quan và hướng dẫn triển khai dự án.
 
 ---
 
