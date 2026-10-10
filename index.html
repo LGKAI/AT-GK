@@ -1,232 +1,396 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AT 💓 GK</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
-    
+    <title>AT ♡ GK</title>
+
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="hearts-container"></div>
 
-    <header>
-        <h1>💖 Tình Yêu Socola Kẹo Mút 💖</h1>
-        <h2>Anh Thư 💓 Gia Khánh</h2>
-        <nav>
-            <a href="#history">Lịch Sử Chuyện Tình</a>
-            <a href="#places">Nơi Ghi Dấu Kỉ Niệm</a>
-            <a href="#foods">Món Ngon Hai Đứa</a>
-            <a href="#music">Nhạc Rap Cho Em</a>
-            <a href="#quiz">Bài Test Fan Cứng</a>
-        </nav>
+    <!-- Header cho thiết bị di động (màn hình nhỏ) -->
+    <header class="mobile-header">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Mở menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="mobile-brand">
+            <img src="img/favicon.jpg" alt="Avatar" class="mobile-avatar">
+            <span class="mobile-title">AT ♡ GK</span>
+        </div>
+        <div class="mobile-header-heart">
+            <span>🍩</span>
+        </div>
     </header>
 
-    <div class="container">
-        <section id="welcome" class="card active-section">
-            <h2 style="border-bottom: none; font-size: 2em; margin-top: 20px;">🎉 Chào mừng bạn đến với trang chủ của <br> Anh Thư và Gia Khánh! 🎉</h2>
-            <p style="text-align: center; font-size: 1.2em; margin-top: 15px;">Hãy nhấn vào các mục trên thanh menu màu hồng phía trên để khám phá những câu chuyện ngọt ngào và dễ thương của tụi tui nha! 💖</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="img/start.jpg" alt="Ảnh tụi tui" style="max-width: 300px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-            </div>
-        </section>
+    <!-- Lớp phủ mờ khi mở menu trên mobile -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
-        <section id="history" class="card hidden-section">
-            <h2>📖 Lịch sử chuyện tình của Thư và Khánh</h2>
-            <div class="content-row">
-                <img src="img/story.jpg" alt="Ảnh kỷ niệm">
-                <div class="text">
-                    <p><strong>Bắt đầu vào ngày:</strong> 30/10/2025</p>
-                    <p>Thực ra câu chuyện bắt đầu từ trong khu quân sự đợt tháng 9/2025, tụi tui chung đại đội. Lúc đó Thư làm đại đội phó hậu cần, còn Khánh chỉ là một 
-                        thành viên bình thường. Trước sự dễ thương, năng động và ân cần của "cô đại đội phó tóc đỏ", Khánh đã phải lòng Thư. Nhưng vì bản tính nhút nhát 
-                        nên Khánh chỉ có thể đứng từ xa quan sát và đêm về lại thầm thương trộm nhớ cô gái đó. Mãi đến khi học xong quân sự, ra ngoài thì Khánh mới dám 
-                        làm quen và rủ Thư đi chơi, đi học bài. Sau khoảng một tháng "cưa cẩm", cuối cùng Thư cũng mở lòng với Khánh, từ đó mở ra một chương mới cho hai 
-                        đứa, bắt đầu một "tình yêu socola kẹo mút cute hột me phô mai que"...
-                    </p>
-                </div>
+    <!-- Thanh Menu dọc bên trái -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <button id="sidebar-close" class="sidebar-close-btn" aria-label="Đóng menu">✕</button>
+            <div class="sidebar-avatar">
+                <img src="img/favicon.jpg" alt="Avatar" class="avatar-img">
             </div>
-        </section>
+            <h1 class="sidebar-title">Tình Yêu<br>Socola Kẹo Mút</h1>
+            <h2 class="sidebar-subtitle">Anh Thư 💓 Gia Khánh</h2>
+            <div class="sidebar-divider"></div>
+        </div>
 
-        <section id="places" class="card hidden-section">
-            <h2>🏰 Những nơi Thư và Khánh thường xuyên đi cùng nhau</h2>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="img/hcmustd.jpg" alt="hcmustd">
-                    <p>HCMUS Thủ Đức - Ngôi trường mà cả hai đang theo học, buổi trưa học xong tụi tui thường xuống hầm nhà điều hành để ngủ trưa, bao mát nha!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/hcmusq5.jpg" alt="hcmusg5">
-                    <p>HCMUS quận 5 - Là cơ sở chính của trường, lúc đầu tụi tui lên đây chỉ để tích luỹ chuyên đề, sau lên thường xuyên hơn vì Thư có làm việc tại phòng trưng bày của khoa Địa chất.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/ktxb.jpg" alt="ktxb">
-                    <p>KTX khu B - Nơi ở của Khánh, chỗ này an ninh nghiêm ngặt lắm, không cho người ngoài vô. Nhưng mà tụi tui vẫn có cách qua mặt bảo vệ để cho Thư "lẻn vô" mà không ai biết hẹ hẹ.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/nvhsv.jpg" alt="nvhsv">
-                    <p>Nhà văn hoá sinh viên - Chỗ này Thư hay tới để làm hoạt động bên đội tình nguyện, thường là vào Chủ nhật. Khánh cũng hay tới đó "ngồi vất vưởng" để đợi đón Thư về.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/ministop.jpg" alt="ministop">
-                    <p>Ministop - Cửa hàng tiện lợi mà hai đứa thường ra ngồi học bài và ăn cơm cùng nhau, nơi đây gắn liền với những giai đoạn ôn thi của tụi tui.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/congviengannha.jpg" alt="congviengannha">
-                    <p>Công viên gần nhà - Chỗ này gần nhà Thư, tụi tui hay mua đồ ăn ra đây ngồi vừa ăn vừa tâm sự. Công viên này gắn với rất nhìu kỉ niệm của tụi tui đoá!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/congviensangtao.jpg" alt="congviensangtao">
-                    <p>Công viên Sáng Tạo - Buổi tối tụi tui thỉnh thoảng mua xiên bẩn ra đây ngồi ăn và "deep talk" với nhau. Chỗ này đẹp, nhưng mà tối khuya lạnh vờ cờ lờ.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/congvienlandmark.jpg" alt="congvienlandmark">
-                    <p>Công viên Landmark - Cũng giống như công viên Sáng Tạo, chỗ này tụi tui cũng đi vào buổi tối, ngồi chill chill và cũng "deep talk" tới khuya hì hì. À chỗ này đẹp với xịn lắm nhe!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/hoda.jpg" alt="hoda">
-                    <p>Hồ đá - Chỗ này tụi tui hay ghé mỗi lần chạy xe lượn khắp làng đại học. Chill lắm, lại còn gần khu quân sự nữa nên tụi tui thường ngồi đây ôn lại những kỉ niệm thời còn chưa quen nhau ha ha.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/quancafeoxy.jpg" alt="quancafeoxy">
-                    <p>Quán cafe Oxy - Quán này ở làng đại học, tụi tui hay ghé đây để học bài và nghỉ ngơi. Đồ uống thì rẻ, không gian thì rộng rãi, chill chill. Đây là quán cafe ruột của tụi tui đoá!</p>
+        <nav class="sidebar-nav">
+            <a href="#welcome" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Trang chủ</span>
+            </a>
+            <a href="#events" class="nav-item">
+                <span class="nav-icon">🎁</span>
+                <span class="nav-text">Sự kiện đặc biệt</span>
+            </a>
+            <a href="#places" class="nav-item">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-text">Nơi chốn kỉ niệm</span>
+            </a>
+            <a href="#foods" class="nav-item">
+                <span class="nav-icon">🍜</span>
+                <span class="nav-text">Món ngon hai đứa</span>
+            </a>
+            <a href="#music" class="nav-item">
+                <span class="nav-icon">🎤</span>
+                <span class="nav-text">Nhạc rap cho em</span>
+            </a>
+            <a href="#quiz" class="nav-item">
+                <span class="nav-icon">🎯</span>
+                <span class="nav-text">Bài test fan cứng</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Made with 💝 for Anh Thư</p>
+        </div>
+    </aside>
+
+    <div class="main-layout">
+        <!-- Thanh ngang trên cùng (Top Bar) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <span class="top-bar-quote">Góc nhỏ ngọt ngào của <strong>Anh Thư</strong> ♡ <strong>Gia
+                        Khánh</strong></span>
+            </div>
+            <div class="top-bar-right">
+                <div class="love-counter-pill">
+                    <span id="love-days-count">Đang đếm ngày yêu...</span>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section id="foods" class="card hidden-section">
-            <h2>🍰 Những món ăn yêu thích của Thư và Khánh</h2>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="img/comlapxuong.jpg" alt="comthitheoluoc">
-                    <p>Cơm lạp xưởng - Món Khánh thích nhất, bởi đây là món mà tự tay Thư làm cho Khánh ăn. Thực sự là rất rất ngon nha, cả cơm và lạp xưởng đều có hương vị yêu thương dạt dào lắm lun!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/comthitheoluoc.jpg" alt="comthitheoluoc">
-                    <p>Cơm thịt heo luộc - Cơm ba mẹ nấu vẫn luôn đỉnh chóp nha! Cả Thư và Khánh đều thích thịt heo vừa nạc vừa mỡ, ngon phải gọi là "nhức nách". Mỗi lần ăn xong là cả hai đều no mún xỉu, nhất là ông Khánh cứ ăn gắng thế là cái bụng to như cái trống lun.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/comlongxaodua.jpg" alt="comlongxaodua">
-                    <p>Cơm lòng xào dưa - Món này là tụi tui "đi đại đại" chỗ gần nhà Thư mà phát hiện ra đó. Quán của "cô", tụi tui chỉ gọi là "cô" chứ không biết tên, chỉ biết đồ ăn ở đây ngon xỉu.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/goigavit.jpg" alt="comthitheoluoc">
-                    <p>Gỏi gà vịt - Món này healthy nha, bình thường Thư ít ăn rau lắm, mà đem món này ra Thư chén hết tất cả loại rau lun ha ha. Thịt gà hay thịt vịt đều ngon, nước mắm đậm đà lắm lun!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/nemnuong.jpg" alt="nemnuong">
-                    <p>Nem nướng - Món này tụi tui chỉ ăn quán gần KTX khu A. Thư siu mê, còn Khánh thì cực thích. Topping đầy ắp, mắm nêm ngon hết nước chấm. Hôm đầu tiên đi ăn món này tụi tui mới phát hiện là gu ẩm thực của tụi tui giống nhau vãi hi hi.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/bundaumamtom.jpg" alt="bundaumamtom">
-                    <p>Bún đậu mắm tôm - Tụi tui hay ăn quán gần KTX khu B, ngon cũng không kém nem nướng nha! Thịt heo luộc vừa nạc vừa mỡ với lòng heo dai dai nóng hổi đúng gu của Thư, món này lúc đầu Khánh cũng không quá hạp nhưng mà đi ăn chung với Thư riết cũng ghiền lun he he. À mà hôm đầu tiên tụi tui ăn món này là một hôm siu vui lun!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/banhcanhcaloc.jpg" alt="banhcanh">
-                    <p>Bánh canh cá lóc - Món này tụi tui đi học hay ra quán gần trường ăn. Đây là đặc sản của quê Khánh, đậm đà, nóng hổi. Mà công nhận hai đứa đi với nhau ăn cái gì cũng thấy hợp, thấy ngon he he.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/phalau.jpg" alt="phalau">
-                    <p>Phá lấu - Món này cũng nhờ "đi đại đại" chỗ gần nhà Thư mà tụi tui phát hiện ra. Ê mà ngon vờ lờ, siu thơm nữa, Thư mới mở ra là đã phải thốt lên "Thơm quá anh ưi!".</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/garan.jpg" alt="garan">
-                    <p>Gà rán - Jollibee với Chicken Plus đều ngon, nhưng mà số một trong lòng tụi tui vẫn là KFC nha! Đây nổi bật nhờ phô mai thơm phức, mỳ Ý có cả gà viên, và khoai tây chiên giòn lắm lun!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/dookki.jpg" alt="comthitheoluoc">
-                    <p>Dookki - Món này đắt nên vài tháng mới đi ăn một lần. Mỗi lần ăn xong là cả hai đứa đều no mà khờ người lun hì hì. Tụi tui thấy ở đây đồ rán hay đồ lẩu gì cũng ngon hết nha!</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/thitnuong.jpg" alt="comthitheoluoc">
-                    <p>Thịt nướng - Lâu lâu tụi tui mới ăn một lần, nhưng mà mỗi lần ăn đều cảm thấy rất rất ngon. Khánh thích tự tay nướng thịt cho Thư ăn lắm! Tưởng tượng cái cảm giác trời mát mát, hai đứa đút nhau ăn miếng thịt nướng nóng hổi mà không cưỡng lại được he he.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/ocmongtaysotme.jpg" alt="ocmongtaysotme">
-                    <p>Ốc móng tay sốt me - Món này ăn ở Vũng Tàu. Trước khi ăn Khánh có nói Thư cẩn thận kẻo "nghiện", thế là Thư nghiện món này lun. Đến nỗi mà ăn hết ốc rồi Thư còn để lại dĩa nước sốt để chấm cho hết lun mà ha ha.</p>
-                </div>
+        <main class="main-wrapper">
+            <div class="container">
+                <!-- Trang chủ: Ở trên là chào mừng, lướt xuống là lịch sử -->
+                <section id="welcome" class="welcome-section active-section">
+                    <!-- Phần Chào mừng ở trên -->
+                    <div class="card welcome-card">
+                        <h2 class="welcome-title">🏠 Chào mừng bạn đến với trang chủ của <br> Anh Thư và Gia Khánh!
+                        </h2>
+                        <p class="welcome-desc">Hãy nhấn vào các mục trên thanh menu màu hồng bên trái để khám phá những
+                            câu chuyện ngọt ngào và dễ thương của tụi tui nha!</p>
+                        <div class="welcome-img-container">
+                            <img src="img/start.jpg" alt="Ảnh tụi tui" class="welcome-img">
+                        </div>
+                    </div>
+
+                    <!-- Phần Lịch sử chuyện tình ở dưới (lướt xuống là lịch sử) -->
+                    <div class="card history-card" id="history-part">
+                        <h2>📖 Lịch sử chuyện tình của Thư và Khánh</h2>
+                        <div class="content-row">
+                            <img src="img/story.jpg" alt="Ảnh kỷ niệm">
+                            <div class="text">
+                                <p><strong>Bắt đầu vào ngày:</strong> 30/10/2025</p>
+                                <p>Thực ra câu chuyện bắt đầu từ trong khu quân sự đợt tháng 9/2025, tụi tui chung đại
+                                    đội. Lúc đó Thư làm đại đội phó hậu cần, còn Khánh chỉ là một thành viên bình
+                                    thường. Trước sự dễ thương, năng động và ân cần của "cô đại đội phó tóc đỏ", Khánh
+                                    đã phải lòng Thư. Nhưng vì bản tính nhút nhát nên Khánh chỉ có thể đứng từ xa quan
+                                    sát và đêm về lại thầm thương trộm nhớ cô gái đó. Mãi đến khi học xong quân sự, ra
+                                    ngoài thì Khánh mới dám làm quen và rủ Thư đi chơi, đi học bài. Sau khoảng một tháng
+                                    "cưa cẩm", cuối cùng Thư cũng mở lòng với Khánh, từ đó mở ra một chương mới cho hai
+                                    đứa, bắt đầu một "tình yêu socola kẹo mút cute hột me phô mai que"...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sự kiện đặc biệt -->
+                <section id="events" class="card hidden-section">
+                    <h2>🎁 Những sự kiện đặc biệt Thư và Khánh trải qua cùng nhau</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="img/kiniem1thang.jpg" alt="Kỉ niệm 1 tháng yêu nhau">
+                            <p><strong>Kỉ niệm 1 tháng yêu nhau (30/11/2025):</strong> Tròn 1 tháng đầu tiên hai đứa
+                                chính thức bước vào thế giới của nhau. Một tháng trôi qua thật êm đềm với những buổi hẹn
+                                hò đầu tiên, những cái hôn còn chút ngượng ngùng và biết bao niềm vui ngọt ngào mở
+                                đầu cho hành trình tình yêu.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/sinhnhatat.jpg" alt="Sinh nhật tuổi 20 của Anh Thư">
+                            <p><strong>Sinh nhật tuổi 20 của Anh Thư (06/03/2026):</strong> Ngày sinh nhật đặc biệt chào
+                                đón tuổi 20 rực rỡ của "cô đại đội phó". Chúc em bé tuổi mới luôn vui tươi, rạng ngời,
+                                học tập thật tốt và lúc nào cũng có anh ở bên cạnh yêu thương, cưng chiều nha!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/kiniemnuanam.jpg" alt="Kỉ niệm nửa năm yêu nhau">
+                            <p><strong>Kỉ niệm nửa năm yêu nhau (30/04/2026):</strong> Tròn 6 tháng tụi mình cùng nhau
+                                đi qua bao nhiêu cung bậc cảm xúc, từ những ngày ôn thi vất vả đến những
+                                buổi tối lượn phố tâm sự. Tình cảm của hai đứa ngày càng khăng khít, thấu hiểu và thương
+                                nhau nhiều hơn.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/sinhnhatgk.jpg" alt="Sinh nhật tuổi 21 của Gia Khánh">
+                            <p><strong>Sinh nhật tuổi 21 của Gia Khánh (16/09/2026):</strong> Sinh nhật tuổi 21 ấm áp và
+                                trọn vẹn nhất của Gia Khánh vì đã có Anh Thư đồng hành. Cảm ơn em bé vì những món quà
+                                bất ngờ, những lời chúc ngọt ngào và vì đã luôn là chỗ dựa bình yên nhất của anh.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="places" class="card hidden-section">
+                    <h2>🗺️ Những nơi Thư và Khánh thường xuyên đi cùng nhau</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="img/hcmustd.jpg" alt="hcmustd">
+                            <p><strong>HCMUS Thủ Đức:</strong> Ngôi trường mà cả hai đang theo học, buổi trưa học xong
+                                tụi tui thường xuống hầm nhà điều hành để ngủ trưa, bao mát nha!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/hcmusq5.jpg" alt="hcmusg5">
+                            <p><strong>HCMUS quận 5:</strong> Là cơ sở chính của trường, lúc đầu tụi tui lên đây chỉ để
+                                tích luỹ chuyên đề, sau lên thường xuyên hơn vì Thư có làm việc tại phòng trưng bày của
+                                khoa Địa chất.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/ktxb.jpg" alt="ktxb">
+                            <p><strong>KTX khu B:</strong> Nơi ở của Khánh, chỗ này an ninh nghiêm ngặt lắm, không cho
+                                người ngoài vô. Nhưng mà tụi tui vẫn có cách qua mặt bảo vệ để cho Thư "lẻn vô" mà không
+                                ai biết hẹ hẹ.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/nvhsv.jpg" alt="nvhsv">
+                            <p><strong>Nhà văn hoá sinh viên:</strong> Chỗ này Thư hay tới để làm hoạt động bên đội tình
+                                nguyện, thường là vào Chủ nhật. Khánh cũng hay tới đó "ngồi vất vưởng" để đợi đón Thư
+                                về.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/ministop.jpg" alt="ministop">
+                            <p><strong>Ministop:</strong> Cửa hàng tiện lợi mà hai đứa thường ra ngồi học bài và ăn cơm
+                                cùng nhau, nơi đây gắn liền với những giai đoạn ôn thi của tụi tui.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/congviengannha.jpg" alt="congviengannha">
+                            <p><strong>Công viên gần nhà:</strong> Chỗ này gần nhà Thư, tụi tui hay mua đồ ăn ra đây
+                                ngồi vừa ăn vừa tâm sự. Công viên này gắn với rất nhìu kỉ niệm của tụi tui đoá!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/congviensangtao.jpg" alt="congviensangtao">
+                            <p><strong>Công viên Sáng Tạo:</strong> Buổi tối tụi tui thỉnh thoảng mua xiên bẩn ra đây
+                                ngồi ăn và "deep talk" với nhau. Chỗ này đẹp, nhưng mà tối khuya lạnh vờ cờ lờ.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/congvienlandmark.jpg" alt="congvienlandmark">
+                            <p><strong>Công viên Landmark:</strong> Cũng giống như công viên Sáng Tạo, chỗ này tụi tui
+                                cũng đi vào buổi tối, ngồi chill chill và cũng "deep talk" tới khuya hì hì. À chỗ này
+                                đẹp với xịn lắm nhe!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/hoda.jpg" alt="hoda">
+                            <p><strong>Hồ đá:</strong> Chỗ này tụi tui hay ghé mỗi lần chạy xe lượn khắp làng đại học.
+                                Chill lắm, lại còn gần khu quân sự nữa nên tụi tui thường ngồi đây ôn lại những kỉ niệm
+                                thời còn chưa quen nhau ha ha.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/quancafeoxy.jpg" alt="quancafeoxy">
+                            <p><strong>Quán cafe Oxy:</strong> Quán này ở làng đại học, tụi tui hay ghé đây để học bài
+                                và nghỉ ngơi. Đồ uống thì rẻ, không gian thì rộng rãi, chill chill. Đây là quán cafe
+                                ruột của tụi tui đoá!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="foods" class="card hidden-section">
+                    <h2>🍜 Những món ăn yêu thích của Thư và Khánh</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="img/comlapxuong.jpg" alt="comthitheoluoc">
+                            <p><strong>Cơm lạp xưởng:</strong> Món Khánh thích nhất, bởi đây là món mà tự tay Thư làm
+                                cho Khánh ăn. Thực sự là rất rất ngon nha, cả cơm và lạp xưởng đều có hương vị yêu
+                                thương dạt dào lắm lun!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/comthitheoluoc.jpg" alt="comthitheoluoc">
+                            <p><strong>Cơm thịt heo luộc:</strong> Cơm ba mẹ nấu vẫn luôn đỉnh chóp nha! Cả Thư và Khánh
+                                đều thích thịt heo vừa nạc vừa mỡ, ngon phải gọi là "nhức nách". Mỗi lần ăn xong là cả
+                                hai đều no mún xỉu, nhất là ông Khánh cứ ăn gắng thế là cái bụng to như cái trống lun.
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/comlongxaodua.jpg" alt="comlongxaodua">
+                            <p><strong>Cơm lòng xào dưa:</strong> Món này là tụi tui "đi đại đại" chỗ gần nhà Thư mà
+                                phát hiện ra đó. Quán của "cô", tụi tui chỉ gọi là "cô" chứ không biết tên, chỉ biết đồ
+                                ăn ở đây ngon xỉu.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/goigavit.jpg" alt="comthitheoluoc">
+                            <p><strong>Gỏi gà vịt:</strong> Món này healthy nha, bình thường Thư ít ăn rau lắm, mà đem
+                                món này ra Thư chén hết tất cả loại rau lun ha ha. Thịt gà hay thịt vịt đều ngon, nước
+                                mắm đậm đà lắm lun!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/nemnuong.jpg" alt="nemnuong">
+                            <p><strong>Nem nướng:</strong> Món này tụi tui chỉ ăn quán gần KTX khu A. Thư siu mê, còn
+                                Khánh thì cực thích. Topping đầy ắp, mắm nêm ngon hết nước chấm. Hôm đầu tiên đi ăn món
+                                này tụi tui mới phát hiện là gu ẩm thực của tụi tui giống nhau vãi hi hi.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/bundaumamtom.jpg" alt="bundaumamtom">
+                            <p><strong>Bún đậu mắm tôm:</strong> Tụi tui hay ăn quán gần KTX khu B, ngon cũng không kém
+                                nem nướng nha! Thịt heo luộc vừa nạc vừa mỡ với lòng heo dai dai nóng hổi đúng gu của
+                                Thư, món này lúc đầu Khánh cũng không quá hạp nhưng mà đi ăn chung với Thư riết cũng
+                                ghiền lun he he. À mà hôm đầu tiên tụi tui ăn món này là một hôm siu vui lun!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/banhcanhcaloc.jpg" alt="banhcanh">
+                            <p><strong>Bánh canh cá lóc:</strong> Món này tụi tui đi học hay ra quán gần trường ăn. Đây
+                                là đặc sản của quê Khánh, đậm đà, nóng hổi. Mà công nhận hai đứa đi với nhau ăn cái gì
+                                cũng thấy hợp, thấy ngon he he.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/phalau.jpg" alt="phalau">
+                            <p><strong>Phá lấu:</strong> Món này cũng nhờ "đi đại đại" chỗ gần nhà Thư mà tụi tui phát
+                                hiện ra. Ê mà ngon vờ lờ, siu thơm nữa, Thư mới mở ra là đã phải thốt lên "Thơm quá anh
+                                ưi!".</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/garan.jpg" alt="garan">
+                            <p><strong>Gà rán:</strong> Jollibee với Chicken Plus đều ngon, nhưng mà số một trong lòng
+                                tụi tui vẫn là KFC nha! Đây nổi bật nhờ phô mai thơm phức, mỳ Ý có cả gà viên, và khoai
+                                tây chiên giòn lắm lun!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/dookki.jpg" alt="comthitheoluoc">
+                            <p><strong>Dookki:</strong> Món này đắt nên vài tháng mới đi ăn một lần. Mỗi lần ăn xong là
+                                cả hai đứa đều no mà khờ người lun hì hì. Tụi tui thấy ở đây đồ rán hay đồ lẩu gì cũng
+                                ngon hết nha!</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/thitnuong.jpg" alt="comthitheoluoc">
+                            <p><strong>Thịt nướng:</strong> Lâu lâu tụi tui mới ăn một lần, nhưng mà mỗi lần ăn đều cảm
+                                thấy rất rất ngon. Khánh thích tự tay nướng thịt cho Thư ăn lắm! Tưởng tượng cái cảm
+                                giác trời mát mát, hai đứa đút nhau ăn miếng thịt nướng nóng hổi mà không cưỡng lại được
+                                he he.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/ocmongtaysotme.jpg" alt="ocmongtaysotme">
+                            <p><strong>Ốc móng tay sốt me:</strong> Món này ăn ở Vũng Tàu. Trước khi ăn Khánh có nói Thư
+                                cẩn thận kẻo "nghiện", thế là Thư nghiện món này lun. Đến nỗi mà ăn hết ốc rồi Thư còn
+                                để lại dĩa nước sốt để chấm cho hết lun mà ha ha.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="music" class="card hidden-section">
+                    <h2>🎤 Nhạc Rap Khánh viết tặng Thư</h2>
+                    <div class="video-container">
+                        <div class="video-item">
+                            <h3>Bản tình ca không hoàn thiện</h3>
+                            <iframe src="https://drive.google.com/file/d/1HqwOnH1b9PJGPe4grrTEU8hxz3hLVCnl/preview"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <p><strong>Gia Khánh viết vào tháng 3/2026:</strong> Ghi lại những kỉ niệm khó phai, những
+                                điều tốt đẹp mà Anh Thư mang lại cho cuộc sống của Gia Khánh. Từng câu chữ đều là sự
+                                chân thành và tình cảm nồng nhiệt nhất của một chàng trai đang chìm đắm trong tình yêu,
+                                muốn lưu giữ lại khoảnh khắc đẹp đẽ nhất của hai đứa.</p>
+                        </div>
+
+                        <div class="video-item">
+                            <h3>Ngày rời chuyến bay</h3>
+                            <iframe src="https://drive.google.com/file/d/19ZEv_H4XH_CkpAKaUtjR1huuAT53qK_R/preview"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <p><strong>Gia Khánh viết vào tháng 7/2026:</strong> Đó là lúc Gia Khánh sắp tạm biệt Anh
+                                Thư để về quê. Vì sắp phải xa nhau nên Gia Khánh đã bày tỏ nỗi nhớ Anh Thư qua từng câu
+                                rap. Cảm giác bịn rịn, chẳng nỡ rời xa được gói gọn trong giai điệu đầy cảm xúc, như một
+                                lời hứa sẽ sớm gặp lại nhau.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="quiz" class="card hidden-section">
+                    <h2>🎯 Bài Test: Bạn có phải là fan cứng của Thư và Khánh?</h2>
+                    <form id="loveQuiz">
+
+                        <div class="question">
+                            <p>1. Anh Thư và Gia Khánh chính thức bắt đầu câu chuyện tình yêu vào ngày nào?</p>
+                            <label><input type="radio" name="q1" value="true"> 30/10/2025</label>
+                            <label><input type="radio" name="q1" value="false"> 30/09/2025</label>
+                        </div>
+                        <div class="question">
+                            <p>2. Trong đợt học quân sự, Anh Thư giữ chức vụ gì?</p>
+                            <label><input type="radio" name="q2" value="true"> Đại đội phó hậu cần</label>
+                            <label><input type="radio" name="q2" value="false"> Đại đội trưởng</label>
+                        </div>
+                        <div class="question">
+                            <p>3. Món ăn nào do chính tay Anh Thư làm khiến Gia Khánh thích nhất?</p>
+                            <label><input type="radio" name="q3" value="false"> Cơm thịt heo luộc</label>
+                            <label><input type="radio" name="q3" value="true"> Cơm lạp xưởng</label>
+                        </div>
+                        <div class="question">
+                            <p>4. Món "Ốc móng tay sốt me" mà Thư ghiền tới mức chấm cạn nước sốt được ăn ở đâu?</p>
+                            <label><input type="radio" name="q4" value="true"> Vũng Tàu</label>
+                            <label><input type="radio" name="q4" value="false"> Làng đại học</label>
+                        </div>
+                        <div class="question">
+                            <p>5. Bài rap "Ngày rời chuyến bay" được Gia Khánh sáng tác vào thời điểm nào?</p>
+                            <label><input type="radio" name="q5" value="false"> Tháng 3/2026</label>
+                            <label><input type="radio" name="q5" value="true"> Tháng 7/2026</label>
+                        </div>
+                        <div class="question">
+                            <p>6. Biệt danh mà Gia Khánh đặt cho Anh Thư là gì?</p>
+                            <label><input type="radio" name="q6" value="true"> Em Bé</label>
+                            <label><input type="radio" name="q6" value="false"> Con Heo</label>
+                        </div>
+                        <div class="question">
+                            <p>7. Biệt danh mà Anh Thư đặt cho Gia Khánh là gì?</p>
+                            <label><input type="radio" name="q7" value="false"> Cục Cưng</label>
+                            <label><input type="radio" name="q7" value="true"> Cục Dàng</label>
+                        </div>
+                        <div class="question">
+                            <p>8. Từ signature của Anh Thư và Gia Khánh dùng để chọc nhau?</p>
+                            <label><input type="radio" name="q8" value="true"> Bối rối</label>
+                            <label><input type="radio" name="q8" value="false"> Mập địt</label>
+                        </div>
+                        <div class="question">
+                            <p>9. Những lúc nũng nịu và nghịch Gia Khánh, Anh Thư hay làm gì nhất?</p>
+                            <label><input type="radio" name="q9" value="false"> Vuốt ve và hun Gia Khánh</label>
+                            <label><input type="radio" name="q9" value="true"> Cắn và tát Gia Khánh</label>
+                        </div>
+                        <div class="question">
+                            <p>10. Anh Thư hay dùng câu nào để "chê" Gia Khánh?</p>
+                            <label><input type="radio" name="q10" value="true"> Anh chạ tinh tế gì cạ!</label>
+                            <label><input type="radio" name="q10" value="false"> Anh quá tệ!</label>
+                        </div>
+                        <button type="submit" class="btn">Nộp Bài Test</button>
+                    </form>
+                    <div id="quiz-result" class="result-box"></div>
+                </section>
             </div>
-        </section>
-
-        <section id="music" class="card hidden-section">
-            <h2>🎤 Nhạc Rap Khánh viết tặng Thư</h2>
-            <div class="video-container">
-                <div class="video-item">
-                    <h3>Bản tình ca không hoàn thiện</h3>
-                    <iframe src="https://drive.google.com/file/d/1HqwOnH1b9PJGPe4grrTEU8hxz3hLVCnl/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    <p><strong>Gia Khánh viết vào tháng 3/2026:</strong> Ghi lại những kỉ niệm khó phai, những điều tốt đẹp mà Anh Thư mang lại cho cuộc sống của Gia Khánh. Từng câu chữ đều là sự chân thành và tình cảm nồng nhiệt nhất của một chàng trai đang chìm đắm trong tình yêu, muốn lưu giữ lại khoảnh khắc đẹp đẽ nhất của hai đứa.</p>
-                </div>
-                
-                <div class="video-item">
-                    <h3>Ngày rời chuyến bay</h3>
-                    <iframe src="https://drive.google.com/file/d/19ZEv_H4XH_CkpAKaUtjR1huuAT53qK_R/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    <p><strong>Gia Khánh viết vào tháng 7/2026:</strong> Đó là lúc Gia Khánh sắp tạm biệt Anh Thư để về quê. Vì sắp phải xa nhau nên Gia Khánh đã bày tỏ nỗi nhớ Anh Thư qua từng câu rap. Cảm giác bịn rịn, chẳng nỡ rời xa được gói gọn trong giai điệu đầy cảm xúc, như một lời hứa sẽ sớm gặp lại nhau.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="quiz" class="card hidden-section">
-            <h2>🎯 Bài Test: Bạn có phải là Fan cứng của Thư và Khánh?</h2>
-            <form id="loveQuiz">
-
-                <div class="question">
-                    <p>1. Anh Thư và Gia Khánh chính thức bắt đầu câu chuyện tình yêu vào ngày nào?</p>
-                    <label><input type="radio" name="q1" value="true"> 30/10/2025</label>
-                    <label><input type="radio" name="q1" value="false"> 30/09/2025</label>
-                </div>
-                <div class="question">
-                    <p>2. Trong đợt học quân sự, Anh Thư giữ chức vụ gì?</p>
-                    <label><input type="radio" name="q2" value="true"> Đại đội phó hậu cần</label>
-                    <label><input type="radio" name="q2" value="false"> Đại đội trưởng</label>
-                </div>
-                <div class="question">
-                    <p>3. Món ăn nào do chính tay Anh Thư làm khiến Gia Khánh thích nhất?</p>
-                    <label><input type="radio" name="q3" value="false"> Cơm thịt heo luộc</label>
-                    <label><input type="radio" name="q3" value="true"> Cơm lạp xưởng</label>
-                </div>
-                <div class="question">
-                    <p>4. Món "Ốc móng tay sốt me" mà Thư ghiền tới mức chấm cạn nước sốt được ăn ở đâu?</p>
-                    <label><input type="radio" name="q4" value="true"> Vũng Tàu</label>
-                    <label><input type="radio" name="q4" value="false"> Làng đại học</label>
-                </div>
-                <div class="question">
-                    <p>5. Bài hát "Ngày rời chuyến bay" được Gia Khánh sáng tác vào thời điểm nào?</p>
-                    <label><input type="radio" name="q5" value="false"> Tháng 3/2026</label>
-                    <label><input type="radio" name="q5" value="true"> Tháng 7/2026</label>
-                </div>
-                <div class="question">
-                    <p>6. Biệt danh mà Gia Khánh đặt cho Anh Thư là gì?</p>
-                    <label><input type="radio" name="q6" value="true"> Em Bé</label>
-                    <label><input type="radio" name="q6" value="false"> Con Heo</label>
-                </div>
-                <div class="question">
-                    <p>7. Biệt danh mà Anh Thư đặt cho Gia Khánh là gì?</p>
-                    <label><input type="radio" name="q7" value="true"> Cục Cưng</label>
-                    <label><input type="radio" name="q7" value="false"> Cục Dàng</label>
-                </div>
-                <div class="question">
-                    <p>8. Từ signature của Anh Thư và Gia Khánh dùng để chọc nhau?</p>
-                    <label><input type="radio" name="q8" value="true"> Bối rối</label>
-                    <label><input type="radio" name="q8" value="false"> Mập địt</label>
-                </div>
-                <div class="question">
-                    <p>9. Những lúc nũng nịu và nghịch Gia Khánh, Anh Thư hay làm gì nhất?</p>
-                    <label><input type="radio" name="q9" value="true"> Vuốt ve và hun Gia Khánh</label>
-                    <label><input type="radio" name="q9" value="false"> Cắn và tát Gia Khánh</label>
-                </div>
-                <div class="question">
-                    <p>10. Anh Thư hay dùng câu nào để "chê" Gia Khánh?</p>
-                    <label><input type="radio" name="q10" value="true"> Anh chạ tinh tế gì cạ!</label>
-                    <label><input type="radio" name="q10" value="false"> Anh quá tệ!</label>
-                </div>
-                <button type="submit" class="btn">Nộp Bài Test</button>
-            </form>
-            <div id="quiz-result" class="result-box"></div>
-        </section>
+        </main>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
