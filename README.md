@@ -1,4 +1,4 @@
-# AT ♡ GK - Tình Yêu Socola Kẹo Mút
+# AT ♡ GK
 
 Website (frontend-only) kỉ niệm tình yêu siêu dễ thương của **Anh Thư** và **Gia Khánh**.
 
