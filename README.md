@@ -31,17 +31,6 @@ bai39_project4_at-gk/
 
 ---
 
-## ✨ Tính Năng Chính
-
-- **Đếm ngày yêu:** Hiển thị số ngày bên nhau cập nhật theo thời gian thực.
-- **Top-Bar cố định:** Thanh trạng thái gắn cố định trên cùng khi lướt trang.
-- **Bộ sưu tập kỉ niệm:** Lưu giữ các sự kiện đặc biệt, địa điểm và món ăn gắn bó cùng nhau.
-- **Góc âm nhạc:** Nhúng nhạc rap do chính Gia Khánh sáng tác tặng Anh Thư.
-- **Bài test Fan cứng:** Trắc nghiệm 10 câu hỏi chấm điểm vui nhộn.
-- **Chuẩn hoá di động:** Giao diện tối ưu hoàn hảo trên màn hình smartphone (thẳng hàng, chữ rõ nét, nút bấm to dễ chạm).
-
----
-
 ## 🚀 Cách Triển Khai
 
 ### 1. Chạy trên máy tính (Local)
