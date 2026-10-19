@@ -58,7 +58,7 @@ bai39_project4_at-gk/
    ```
 2. Trên GitHub, vào **Settings** -> chọn tab **Pages**.
 3. Tại **Build and deployment**, mục **Branch** chọn `main` (folder `/root`) -> Nhấn **Save**.
-4. Chờ 1 phút để trang web cập nhật tại: `https://<username>.github.io/<repo-name>/`.
+4. Chờ 1 phút để trang web cập nhật tại: `https://lgkai.github.io/AT-GK/`.
 
 ---
 
